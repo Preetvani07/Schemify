@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Schemify</title>
+    <link rel="stylesheet" href="form.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
+      <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+</head>
+<body>
+
+    <div id="nav" class="home-header h-16 items-center">
+        <div style="width: 150px;"><a href="./index.html" class="size-full" ><img src="./Images/full logo.png" class="rounded-full" alt=""></a></div>
+        <span style="margin: 0 auto;" class="flex flex-shrink items-center searching">
+            <input type="search" name="search" id="search" placeholder=" Search..." class="border-black border-solid border-2 rounded-l-full p-1 border-r-0 focus:outline-none text-center " style=" width: 35vh;">
+            <button type="button" name="search" class="material-icons bg-white rounded-r-full border-black border-solid border-l-0 border-2" style="height: 35.1px;">search</button>
+        </span>
+        <a href="./Login.html" target="_blank"><span class="material-icons mr-5 mb-0 mt-0 ml-0 border-black border-2 rounded-full">account_circle</span></a>
+      </div>
+    
+
+<!-- <script src="form.js"></script> -->
+<form id="animatedForm" action="/store" method="POST" enctype="multipart/form-data" class="form">
+    <label for="username" class="font-bold">Username:</label>
+    <input type="text" id="username" name="username" required class="uppercase">
+
+    <label for="age" class="mt-3 font-bold">Age:</label>
+    <input type="number" id="age" name="age" required>
+
+    <label for="caste" class="mt-3 font-bold">Category:</label>
+    <div class="flex gap-1" id="caste">
+        General<input type="radio" id="gen" value="General" name="caste" required>
+        OBC<input type="radio" id="obc" value="OBC" name="caste" required>
+        SC<input type="radio" id="sc" value="SC" name="caste" required>
+        St<input type="radio" id="st" value="ST" name="caste" required>
+    </div>
+
+    <label for="state" class="mt-3 font-bold">Select your State:</label>
+<select id="state" name="state" class="w-full mr-1 rounded-md p-1 focus:bg-black" style="-webkit-text-fill-color: rgb(250, 250, 250);" required>
+  <option value="">Select State</option>
+  <option value="Andhra Pradesh">Andhra Pradesh</option>
+  <option value="Arunachal Pradesh">Arunachal Pradesh</option>
+  <option value="Assam">Assam</option>
+  <option value="Bihar">Bihar</option>
+  <option value="Chhattisgarh">Chhattisgarh</option>
+  <option value="Goa">Goa</option>
+  <option value="Gujarat">Gujarat</option>
+  <option value="Haryana">Haryana</option>
+  <option value="Himachal Pradesh">Himachal Pradesh</option>
+  <option value="Jammu and Kashmir">Jammu and Kashmir</option>
+  <option value="Jharkhand">Jharkhand</option>
+  <option value="Karnataka">Karnataka</option>
+  <option value="Kerala">Kerala</option>
+  <option value="Madhya Pradesh">Madhya Pradesh</option>
+  <option value="Maharashtra">Maharashtra</option>
+  <option value="Manipur">Manipur</option>
+  <option value="Meghalaya">Meghalaya</option>
+  <option value="Mizoram">Mizoram</option>
+  <option value="Nagaland">Nagaland</option>
+  <option value="Odisha">Odisha</option>
+  <option value="Punjab">Punjab</option>
+  <option value="Rajasthan">Rajasthan</option>
+  <option value="Sikkim">Sikkim</option>
+  <option value="Tamil Nadu">Tamil Nadu</option>
+  <option value="Telangana">Telangana</option>
+  <option value="Tripura">Tripura</option>
+  <option value="Uttar Pradesh">Uttar Pradesh</option>
+  <option value="Uttarakhand">Uttarakhand</option>
+  <option value="West Bengal">West Bengal</option>
+  </select>
+
+
+
+
+    <label for="annualIncome" class="mt-3 font-bold">Annual Income:</label>
+    <label for="annual-income" class="material-symbols-outlined pr-12 ">currency_rupee
+        <select name="anuualI" id="annual-income" name="annual-income" class="font-sans w-full mr-1 rounded-md p-0 focus:bg-black" style="-webkit-text-fill-color: rgb(250, 250, 250);">
+            <option value="null" name="inr">Select Income</option>
+            <option value="<1" name="inr">Less than INR 1 Lakhs</option>
+            <option value="1-3" name="inr">Between INR 1 Lakhs to 3 Lakhs</option>
+            <option value=">3" name="inr">More than 3 Lakhs</option>
+        </select>
+    </label>
+
+    <label for="profession" class="mt-3 font-bold">Profession:</label>
+    <select name="proffession" id="prof" class="w-full mr-1 rounded-md p-1 focus:bg-black" style="-webkit-text-fill-color: rgb(250, 250, 250);">
+        <option value="student">Student</option>
+        <option value="employee">Employee</option>
+    </select>
+    <label for="gender" class="mt-3 font-bold">Select Gender:</label>
+    <div class="flex" id="gender">
+        Male<input type="radio" name="gender" value="male" id="m" required>
+        Female<input type="radio" name="gender" value="female" id="f" required>
+        Others<input type="radio" name="gender" value="other" id="o" required>
+    </div>
+
+<div class="btn">
+    <button type="button" class="border-solid border-2 border-white rounded-full p-2 mt-6" onclick="submitForm()" id="submit">Submit</button>
+</div>
+</form>
+<script src="./server.js"></script>
+</body>
+
+<!-- <script type="module" src="./DB.js"></script> -->
+</html>

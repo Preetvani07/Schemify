@@ -1,0 +1,277 @@
+.home-container {
+    width: 100%;
+    display: flex;
+    overflow: auto;
+    min-height: 100vh;
+    align-items: center;
+    flex-direction: column;
+  }
+  .home-header {
+    gap: 5px;
+    height: 64px;
+    width: 100%;
+    display: flex;
+    z-index: 100;
+    position: fixed;
+    flex-wrap: wrap;
+    align-self: center;
+    box-shadow: 5px 5px 10px 0px #575454;
+    align-items: center;
+    margin-left: 1px;
+    border-color: var(--dl-color-gray-black);
+    border-width: 1px;
+    margin-right: 1px;
+    padding-left: 1px;
+    border-radius: var(--dl-radius-radius-radius4);
+    margin-bottom: 2px;
+    padding-right: 1px;
+    animation-name: none;
+    flex-direction: row;
+    padding-bottom: 1px;
+    animation-delay: 0s;
+    justify-content:flex-start;
+    background-color: #ffffff;
+    animation-duration: 300ms;
+    animation-direction: normal;
+    animation-iteration-count: 1;
+    animation-timing-function: ease;
+  }
+  .home-footer {
+    flex: 0 0 auto;
+    width: 100%;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    animation-name: image;
+    animation-duration: 4s;
+    animation-delay: 1s;
+    animation-timing-function: ease-in-out;
+
+    margin-top: 10px;
+  }
+
+  .find{
+    align-items: center;
+    --tw-bg-opacity: 1;
+    background-color: rgb(22 163 74 / var(--tw-bg-opacity));
+    border-radius: 9999px;
+    display: flex;
+    padding: 1rem;
+    margin-top: 1.5rem;
+
+  }
+  #find-para{
+    font-family: ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;
+  }
+  .find-btn{
+    margin-left: 0.25rem;
+  }
+/* baad ki css tailwind hata ke */
+  .logo{
+    width: 100%;
+    height: 100%;
+    border-radius: 100%;
+  }
+
+  .searching{
+    display: flex;
+    flex-shrink: 1;
+    align-items: center;
+  }
+  #search-input{
+    border-color: black;
+    border-style: solid;
+    border-width: 2px;
+    border-top-left-radius: 9999px;
+    border-bottom-left-radius: 9999px;
+    padding: 0.25rem;
+    border-right-width: 0px;
+    outline: 2px solid transparent;
+    outline-offset: 2px;
+    text-align: center;
+  }
+  #search-btn{
+    --tw-bg-opacity: 1;
+    background-color: rgb(255 255 255 / var(--tw-bg-opacity));
+    border-top-right-radius: 9999px;
+    border-bottom-right-radius: 9999px;
+    --tw-border-opacity: 1;
+    border-color: rgb(0 0 0 / var(--tw-border-opacity));
+    border-left-width: 0px;
+    border-width: 2px;
+  }
+
+  .login{
+    margin-right: 1.25rem;
+    margin-bottom: 0px;
+    margin-top: 0px;
+    margin-left: 0px;
+    --tw-border-opacity: 1;
+    border-color: rgb(0 0 0 / var(--tw-border-opacity));
+    border-width: 2px;
+    border-radius: 9999px;
+
+  }
+/* baad ki css tailwind hata ke */
+
+  @media only screen and (min-width: 0px) and (max-width: 342px) {
+    
+  }
+  @media (max-width: 800px) { 
+    .start-image{
+        margin-top: 30px;
+    }
+  }
+
+.home-header{
+    animation: start 3s ease-in-out 1s 1 ;
+
+}
+
+.start-image{
+    width: 100%;
+    background-size: cover;
+    animation: image 3s ease-in-out 1s;
+}
+
+@keyframes image {
+    0%{
+        opacity: 0;
+    }
+    60%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+
+  @keyframes start {
+   0%{
+    bottom: 0;
+   }
+   50%{
+    bottom: 50%;
+   }
+   100%{
+    bottom: 90%;
+   }
+  }
+
+  .find{
+    color: #ffffff;
+    animation-name: image;
+    animation-duration: 4s;
+    animation-delay: 1s;
+    animation-timing-function: ease-in-out;
+    cursor: pointer;
+  }
+
+  #how{
+    padding-top: 10px;
+    font-size: medium;
+    color: #464444;
+    font-family: sans-serif;
+  }
+  
+  #hiw{
+    opacity: 0;
+    animation: image 4s ease-in-out 1s 1;
+    animation-fill-mode: forwards;
+    margin-top: 1rem;
+  }
+
+  .work-step{
+    display: grid;
+    margin-top: 1.75rem;
+    text-align: center;
+    gap: 0.25rem;
+  }
+  .work-div{
+    height: 8rem;
+    width: 16rem;
+    font-size: 4.5rem/* 72px */;
+    line-height: 1;
+    border-color: rgb(22 101 52 / 0.5);
+    --tw-text-opacity: 1;
+    color: rgb(31 41 55 / var(--tw-text-opacity));
+    border-width: 4px;
+    border-radius: 0.75rem;
+    
+  }
+
+  /* footer css below */
+  .footer{
+    opacity: 0;
+    background-color: #2f2b45;
+    height: 60vh;
+    width: 100vw;
+    animation: image 4s ease-in-out 1s 1;
+    animation-fill-mode: forwards;
+    }
+    .grid{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+    .one{
+        margin-top: 12vh;
+        font-weight: 400;
+        font-family: Mulish, system-ui, sans-serif;
+        font-size: 14px;
+        color: rgb(255, 255, 255);
+        width: 12vw;
+    }
+    .one h1{
+        font-size: 24px;
+        font-weight: 600;
+        font-family:Poppins, Arial, sans-serif; 
+        color: white;
+        margin-bottom: 5px;
+    }
+    .two{
+        margin-top: 12vh;
+    }
+    .two h1{
+        font-size: 24px;
+        font-weight: 600;
+        font-family:Poppins, Arial, sans-serif; 
+        color: white;
+    }
+    .two ul a{
+        font-weight: 400;
+        font-family: Mulish, system-ui, sans-serif;
+        font-size: 14px;
+        color: white;
+    }
+    ul li a{
+        text-decoration: none;
+    }
+    ul li{
+        list-style: none;
+        list-style-type: none;
+        margin: 11px;
+    }
+    ul li img{
+        margin-right: 10px;
+        height: auto;
+        width: 13px;
+    }
+    .three{
+        margin-top: 12vh;
+    }
+    .three h1{
+        font-size: 24px;
+        font-weight: 600;
+        font-family:Poppins, Arial, sans-serif; 
+        color: white;
+    }
+    .four{
+        margin-top: 12vh;
+    }
+    .four h1{
+        font-size: 24px;
+        font-weight: 600;
+        font-family:Poppins, Arial, sans-serif; 
+        color: white;
+    }
